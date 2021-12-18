@@ -1,0 +1,27 @@
+.example-card {
+    margin: 1.5rem 0;
+}
+.example-header-image {
+    background-size: cover;
+}
+
+mat-card-actions.actions {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    border-top: 2px solid gray;
+    border-bottom: 2px solid gray;
+    
+    
+}
+button {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    background-color: white;
+    border: 0px solid white;
+}
+
+mat-icon {
+    margin: 0 1em
+}

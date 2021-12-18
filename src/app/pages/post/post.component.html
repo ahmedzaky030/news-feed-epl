@@ -1,0 +1,22 @@
+<mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image" [ngStyle]="{'background-image':'url('+post?.avatar+')'}"></div>
+      <mat-card-title>{{ post?.author }}</mat-card-title>
+      <mat-card-subtitle >{{ post?.createdAt }}</mat-card-subtitle>
+    </mat-card-header>
+    <img *ngIf="post?.contentType === Content_Type.IMAGE" mat-card-image [src]="post?.content" alt="Photo of a Shiba Inu">
+    <mat-card-content *ngIf="post?.contentType === Content_Type.TEXT">
+      <p [innerText]="post?.content">
+        
+      </p>
+    </mat-card-content>
+    <video  height="240" controls *ngIf="post?.contentType === Content_Type.VIDEO" >
+        <source  [src]="post?.content">
+        This video can't play
+    </video>
+    <mat-card-actions class="actions">
+      <button mat-button><mat-icon>thumb_up</mat-icon>LIKE</button>
+      <button mat-button><mat-icon>chat_bubble</mat-icon>Comment</button>
+      <button mat-button><mat-icon>emoji_events</mat-icon>Reward</button>
+    </mat-card-actions>
+  </mat-card>
